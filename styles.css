@@ -81,6 +81,8 @@ body {
 }
 
 .boton-carta {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente divertida */
+    text-decoration: none;
     background-color: #fbe5b2; /* Fondo personalizado para el texto */
     border: 2px solid #e0a267; /* Borde con un color suave */
     border-radius: 15px; /* Bordes redondeados */
