@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f0e68c; /* Color de fondo */
+}
+
+.girasol-container {
+    position: relative;
+    animation: wiggle 2s infinite; /* Animación de movimiento */
+}
+
+.girasol {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.pétalo {
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    top: -10px;
+    left: 34px;
+    background: yellow;
+    border-radius: 50px 50px 0 0;
+    transform-origin: bottom center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.pétalo:nth-child(1) { transform: rotate(0deg); }
+.pétalo:nth-child(2) { transform: rotate(45deg); }
+.pétalo:nth-child(3) { transform: rotate(90deg); }
+.pétalo:nth-child(4) { transform: rotate(135deg); }
+.pétalo:nth-child(5) { transform: rotate(180deg); }
+.pétalo:nth-child(6) { transform: rotate(225deg); }
+.pétalo:nth-child(7) { transform: rotate(270deg); }
+.pétalo:nth-child(8) { transform: rotate(315deg); }
+
+.centro {
+    position: absolute;
+    top: 26px;
+    left: 24px;
+    width: 50px;
+    height: 48px;
+    background: brown;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.mensaje {
+    text-align: center;
+    margin-bottom: 20px; /* Espacio entre el texto y el botón */
+}
+
+.mensaje h1 {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente divertida */
+    font-size: 2.5em; /* Tamaño de fuente */
+    color: #4B3C28; /* Color del texto */
+    text-shadow: 
+        3px 3px 0 rgba(255, 255, 255, 0.5), /* Sombra blanca */
+        0 0 25px rgba(0, 0, 0, 0.5); /* Sombra negra */
+    margin: 0; /* Sin márgenes adicionales */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    display: inline-block; /* Para ajustar el fondo */
+}
+
+.boton-carta {
+    background-color: #fbe5b2; /* Fondo personalizado para el texto */
+    border: 2px solid #e0a267; /* Borde con un color suave */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 1.2em; /* Tamaño de fuente */
+    color: #4B3C28; /* Color del texto */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+    box-shadow: 10px 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.boton-carta:hover {
+    background-color: #fbe5b2; /* Cambiar a un fondo amarillo claro al pasar el mouse */
+    transform: translateY(-2px); /* Levantar el botón al pasar el mouse */
+}
+
+.boton-carta:active {
+    transform: translateY(0); /* Restablecer al hacer clic */
+}
+
