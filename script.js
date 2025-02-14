@@ -1,9 +1,15 @@
-document.getElementById('download').addEventListener('click', () => {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-
-    doc.text("¡Feliz San Valentín!", 10, 10);
-    doc.text("Este es un mensaje bonito para ti.", 10, 20);
-
-    doc.save("mensaje_san_valentin.pdf");
+document.addEventListener("DOMContentLoaded", function() {
+    const audio = new Audio("love.mp3"); 
+    
+    const playAudio = () => {
+        audio.play().catch(error => {
+            console.log("Reproducción automática bloqueada, esperando interacción del usuario.");
+        });
+    };
+    
+    playAudio();
+    
+    document.body.addEventListener("click", () => {
+        audio.play();
+    }, { once: true });
 });
